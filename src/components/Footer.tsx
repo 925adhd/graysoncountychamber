@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -11,8 +12,9 @@ export default function Footer() {
               Grayson County Chamber
             </h3>
             <p className="text-base leading-relaxed">
-              Supporting local businesses and strengthening our community since
-              the heart of Kentucky.
+              A membership organization of businesses, community organizations,
+              and educational institutions working together to support a
+              positive business climate in Grayson County.
             </p>
           </div>
 
@@ -81,7 +83,14 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-700 mt-12 pt-8 text-center text-sm text-gray-500">
+        <div className="border-t border-gray-700 mt-12 pt-8 text-center text-sm text-gray-500 space-y-4">
+          <Image
+            src="/h.-Kentucky-Work-Ready-Community-Logo.jpg"
+            alt="Kentucky Work Ready Community In Progress"
+            width={160}
+            height={80}
+            className="mx-auto"
+          />
           <p>
             &copy; {new Date().getFullYear()} Grayson County Chamber of
             Commerce. All rights reserved.

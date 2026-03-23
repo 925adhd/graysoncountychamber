@@ -155,8 +155,8 @@ export default function AboutPage() {
             </div>
             <div className="rounded-2xl overflow-hidden shadow-md">
               <Image
-                src="/scholarship-students.jpg"
-                alt="Chamber scholarship students"
+                src="/groupphoto.jpg"
+                alt="Chamber group photo"
                 width={600}
                 height={400}
                 className="w-full h-64 sm:h-72 object-cover"
@@ -170,6 +170,34 @@ export default function AboutPage() {
                 height={400}
                 className="w-full h-64 sm:h-72 object-cover"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Scholarship */}
+      <section className="py-16 sm:py-20 bg-green-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row gap-8 items-center">
+            <div className="shrink-0">
+              <Image
+                src="/scholarship-students.jpg"
+                alt="Chamber scholarship recipients"
+                width={320}
+                height={240}
+                className="rounded-2xl shadow-md w-full sm:w-80 h-auto object-cover"
+              />
+            </div>
+            <div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
+                $1,000 High School Senior Scholarship
+              </h2>
+              <p className="mt-4 text-lg text-gray-600 leading-relaxed">
+                Every Spring, the Chamber accepts applications for the Annual High School Senior Scholarship. If you are interested, please contact the Grayson County Chamber for requirements and application directions.
+              </p>
+              <p className="mt-5 text-lg text-green-700 font-semibold">
+                Contact the Chamber at (270) 259-5587 for details.
+              </p>
             </div>
           </div>
         </div>

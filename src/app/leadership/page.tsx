@@ -38,8 +38,8 @@ export default function LeadershipPage() {
           </p>
           <div className="mt-8 rounded-2xl overflow-hidden border border-green-100">
             <Image
-              src="/boardofdirectors.jpg"
-              alt="Grayson County Chamber Board of Directors"
+              src="/25-26board.jpg"
+              alt="Grayson County Chamber Board of Directors 2025-2026"
               width={900}
               height={675}
               className="w-full h-auto object-cover"
@@ -100,6 +100,17 @@ export default function LeadershipPage() {
                 </p>
               </div>
             ))}
+          </div>
+          <div className="mt-8 text-center">
+            <Link
+              href="/yp"
+              className="inline-flex items-center gap-2 bg-green-700 text-white px-8 py-3 rounded-xl font-semibold text-lg hover:bg-green-800 transition-colors shadow-sm"
+            >
+              Learn More About YP
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </Link>
           </div>
         </div>
       </section>
@@ -198,10 +209,34 @@ export default function LeadershipPage() {
             deeper investment in the Chamber and in the future of Grayson
             County.
           </p>
-          <div className="mt-8 bg-white rounded-2xl p-5 sm:p-8 border border-gray-200 text-center">
-            <p className="text-lg text-gray-600">
-              President&apos;s Circle members are featured here.
-            </p>
+          <div className="mt-8 space-y-4">
+            <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-sm bg-white">
+              <Image
+                src="/presidentscircle.jpg"
+                alt="President's Circle members"
+                width={1200}
+                height={900}
+                className="w-full h-auto"
+              />
+            </div>
+            <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-sm bg-white">
+              <Image
+                src="/presidents2.jpg"
+                alt="President's Circle members"
+                width={1200}
+                height={900}
+                className="w-full h-auto"
+              />
+            </div>
+            <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-sm bg-white">
+              <Image
+                src="/presidents3.jpg"
+                alt="President's Circle members"
+                width={1200}
+                height={900}
+                className="w-full h-auto"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -216,24 +251,15 @@ export default function LeadershipPage() {
             We recognize individuals who have made a lasting impact on the
             Grayson County business community.
           </p>
-          <div className="mt-8 bg-green-50 rounded-2xl p-5 sm:p-8 border border-green-100 text-center">
-            <p className="text-lg text-gray-600">
-              Hall of Fame inductees will be featured here.
-            </p>
+          <div className="mt-8 rounded-2xl overflow-hidden border border-green-100 shadow-sm">
+            <Image
+              src="/halloffame.jpg"
+              alt="Chamber Hall of Fame inductees"
+              width={900}
+              height={600}
+              className="w-full h-auto object-cover"
+            />
           </div>
-        </div>
-      </section>
-
-      {/* Human Element */}
-      <section className="py-14 sm:py-18 bg-gray-50">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
-            People Who Care About This Community
-          </h2>
-          <p className="mt-6 text-lg text-gray-600 leading-relaxed">
-            Behind every event, connection, and opportunity is a group of people
-            committed to helping local businesses succeed.
-          </p>
         </div>
       </section>
 

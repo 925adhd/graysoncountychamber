@@ -11,11 +11,11 @@ export const metadata: Metadata = {
 const upcomingEvents = [
   {
     title: "Monthly Chamber Luncheon",
-    date: "First Tuesday of Every Month",
+    date: "Second Thursday of Every Month",
     time: "11:30 AM - 1:00 PM",
     location: "Centre on Main, Leitchfield",
     description:
-      "Enjoy a catered lunch, hear from a guest speaker, and network with fellow business owners and community leaders.",
+      "Attended by 100–140 members, our monthly luncheon features guest speakers and incredible networking. Sponsor a luncheon for $500 — includes a front-page newsletter article, press releases, 5 tickets, a 3–5 minute presentation, table decorating, and door prizes. Co-sponsorships available.",
     tag: "Monthly",
     image: "/lucheontable.jpg",
     imagePosition: "center 25%",
@@ -55,12 +55,23 @@ const upcomingEvents = [
     category: "community",
   },
   {
-    title: "Community Festivals & Events",
-    date: "Throughout the Year",
-    time: "Varies",
-    location: "Various Locations in Grayson County",
+    title: "Hometown Christmas",
+    date: "First Weekend in December",
+    time: "Parade at 4:00 PM Saturday",
+    location: "Downtown Leitchfield Square",
     description:
-      "The Chamber helps promote local festivals, holiday events, and community celebrations that bring residents together.",
+      "Hosted with Leitchfield Tourism and Grayson County Tourism, Hometown Christmas features the Hometown Christmas Parade, Christmas on the Square with vendors, kids' activities, food trucks, and local shops open for shopping local!",
+    tag: "Yearly",
+    image: "/festival.jpg",
+    category: "community",
+  },
+  {
+    title: "Fall Crawl & Spring Hop",
+    date: "Fall & Spring",
+    time: "Varies",
+    location: "Local Businesses, Grayson County",
+    description:
+      "Shop local events that encourage residents to visit and support small businesses throughout Grayson County.",
     tag: "Seasonal",
     image: "/festival.jpg",
     category: "community",

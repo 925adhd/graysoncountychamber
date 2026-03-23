@@ -133,8 +133,60 @@ export default function CentreOnMainPage() {
         </div>
       </section>
 
-      {/* 5. Booking */}
+      {/* Rental Rates */}
       <section className="py-16 sm:py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 text-center">
+            Rental Rates
+          </h2>
+          <p className="mt-4 text-lg text-gray-600 text-center max-w-2xl mx-auto">
+            Affordable rates for events of any size. All prices include tax.
+          </p>
+
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+              <div className="bg-green-600 text-white px-5 sm:px-6 py-4">
+                <h3 className="text-lg font-bold">Full Centre</h3>
+              </div>
+              <div className="p-5 sm:p-6 space-y-4">
+                <div className="flex justify-between items-baseline">
+                  <span className="text-gray-700 font-medium">4 Hours</span>
+                  <span className="text-xl font-bold text-green-700">$275.00</span>
+                </div>
+                <div className="flex justify-between items-baseline">
+                  <span className="text-gray-700 font-medium">4+ Hours</span>
+                  <span className="text-xl font-bold text-green-700">$344.50</span>
+                </div>
+                <p className="text-sm text-gray-500 pt-2 border-t border-gray-100">
+                  Requires a refundable $200 deposit
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+              <div className="bg-green-600 text-white px-5 sm:px-6 py-4">
+                <h3 className="text-lg font-bold">Half Centre</h3>
+              </div>
+              <div className="p-5 sm:p-6 space-y-4">
+                <div className="flex justify-between items-baseline">
+                  <span className="text-gray-700 font-medium">4 Hours</span>
+                  <span className="text-xl font-bold text-green-700">$159.00</span>
+                </div>
+                <div className="flex justify-between items-baseline">
+                  <span className="text-gray-700 font-medium">4+ Hours</span>
+                  <span className="text-xl font-bold text-green-700">$185.50</span>
+                </div>
+                <p className="text-sm text-gray-500 pt-2 border-t border-gray-100">
+                  Requires a refundable $100 deposit
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Booking */}
+      <section className="py-16 sm:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 text-center">
             Book Your Event at Centre on Main

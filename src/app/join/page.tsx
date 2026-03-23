@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -135,6 +136,7 @@ export default function JoinPage() {
               "Short feature article about your organization in the Chamber Chatter",
               "Annual Membership Dinner — presenting sponsor with preferred table seating and 8 tickets included",
               "Complimentary invitation for one company representative to attend Leadership Grayson County",
+              "2 free seats at the Monthly Chamber Luncheons",
               "Limited to 15 members — exclusive and prestigious",
             ].map((item) => (
               <div key={item} className="flex items-start gap-3">
@@ -154,6 +156,36 @@ export default function JoinPage() {
             ))}
           </div>
 
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="rounded-2xl overflow-hidden border border-gray-700">
+              <Image
+                src="/presidentscircle.jpg"
+                alt="President's Circle members"
+                width={400}
+                height={300}
+                className="w-full h-48 object-cover"
+              />
+            </div>
+            <div className="rounded-2xl overflow-hidden border border-gray-700">
+              <Image
+                src="/presidents2.jpg"
+                alt="President's Circle event"
+                width={400}
+                height={300}
+                className="w-full h-48 object-cover"
+              />
+            </div>
+            <div className="rounded-2xl overflow-hidden border border-gray-700">
+              <Image
+                src="/presidents3.jpg"
+                alt="President's Circle recognition"
+                width={400}
+                height={300}
+                className="w-full h-48 object-cover"
+              />
+            </div>
+          </div>
+
           <div className="mt-10 text-center">
             <a
               href="tel:2702595587"
@@ -162,6 +194,72 @@ export default function JoinPage() {
               Inquire About President&apos;s Circle
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* Small Business Circle */}
+      <section className="py-16 sm:py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+              <span className="inline-block text-sm font-semibold text-green-600 bg-green-50 px-4 py-1.5 rounded-full mb-4">
+                For Businesses Under 50 Employees
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
+                Small Business Circle
+              </h2>
+              <p className="mt-2 text-3xl font-bold text-green-600">$500<span className="text-lg font-normal text-gray-500"> / year</span></p>
+              <p className="mt-4 text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
+                Small business is the backbone of our community. The Small Business
+                Circle was created to prominently recognize businesses with less than
+                50 employees &mdash; ensuring they survive and thrive with more
+                exposure and support.
+              </p>
+            </div>
+
+            <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
+                {[
+                  "Must have less than 50 employees to qualify",
+                  "Priority Early-Bird seating at the sold-out Annual Dinner",
+                  "Logo on retractable banner displayed at all Chamber functions",
+                  "2 free seats at Monthly Chamber Luncheons",
+                  "Once-a-year feature in the Chamber newsletter",
+                  "Yearly Small Business dinner each May",
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-3">
+                    <svg
+                      className="w-5 h-5 text-green-500 shrink-0 mt-0.5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                    <span className="text-base text-gray-700">{item}</span>
+                  </div>
+                ))}
+            </div>
+
+            <div className="mt-10 rounded-2xl overflow-hidden shadow-md border border-gray-200 max-w-3xl mx-auto">
+              <Image
+                src="/smallbuisness.jpg"
+                alt="Small Business Circle 2025 members"
+                width={900}
+                height={300}
+                className="w-full h-auto object-cover"
+              />
+            </div>
+
+            <div className="mt-8 text-center">
+              <a
+                href="tel:2702595587"
+                className="inline-flex items-center justify-center bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-green-700 transition-colors"
+              >
+                Join the Small Business Circle
+              </a>
+            </div>
         </div>
       </section>
 

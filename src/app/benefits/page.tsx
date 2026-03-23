@@ -20,7 +20,9 @@ const benefitGroups = [
     items: [
       "Online directory listing seen by locals and visitors",
       "Business referrals — we ONLY refer members",
-      "Lobby advertising with brochures and rack cards",
+      "Lobby advertising with brochures and rack cards in the Centre on Main lobby",
+      "Facebook promotions — we follow and share your posts to expand your reach",
+      "Website promotion including Hot Deals listings and community calendar",
       "Monthly newsletter feature",
       "Member window decal",
     ],
@@ -48,10 +50,10 @@ const benefitGroups = [
       </svg>
     ),
     items: [
-      "FREE job postings to reach local talent",
+      "FREE job and internship postings to reach local talent",
       "Member-only marketing tools",
       "Access to membership mailing list",
-      "Chamber Gift Certificate Program",
+      "Chamber Gift Certificate Program — encouraging local shopping with $80,000–$100,000 in gift certificates sold annually ($50/year to participate)",
     ],
   },
   {
@@ -62,10 +64,10 @@ const benefitGroups = [
       </svg>
     ),
     items: [
-      "Leadership Grayson County Program",
+      "Leadership Grayson County — an eight-month program to learn community issues and prepare for a greater role in our community's development",
       "LEAD with Extension leadership classes",
       "Small Business Circle support network",
-      "Discounted conference space and venue rentals",
+      "Discounted conference space and venue rentals at the Centre on Main — members save on every booking",
     ],
   },
 ];
@@ -237,7 +239,7 @@ export default function BenefitsPage() {
           <p className="mt-4 text-lg text-gray-600 text-center max-w-2xl mx-auto">
             Membership doesn&apos;t just help you grow &mdash; it helps you save.
           </p>
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-white rounded-2xl p-5 sm:p-8 border border-gray-200 shadow-sm flex flex-col">
               <div className="flex items-center gap-3 mb-4">
                 <div className="text-green-600 bg-green-50 rounded-xl p-2.5">
@@ -259,6 +261,21 @@ export default function BenefitsPage() {
               <div className="flex items-center gap-3 mb-4">
                 <div className="text-green-600 bg-green-50 rounded-xl p-2.5">
                   <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900">
+                  Infintech Group Rate Merchant Processing
+                </h3>
+              </div>
+              <p className="text-base text-gray-600 leading-relaxed flex-1">
+                Through a partnership with Infintech LLC and other Chambers throughout Kentucky, members receive <strong>special credit/debit card processing rates</strong>. Contact the Chamber for details.
+              </p>
+            </div>
+            <div className="bg-white rounded-2xl p-5 sm:p-8 border border-gray-200 shadow-sm flex flex-col">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="text-green-600 bg-green-50 rounded-xl p-2.5">
+                  <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                   </svg>
                 </div>
@@ -270,6 +287,121 @@ export default function BenefitsPage() {
                 Exclusive savings on office essentials. Call the Chamber for your
                 discount card.
               </p>
+            </div>
+          </div>
+
+          {/* AirMedCare Network */}
+          <div className="mt-8 bg-white rounded-2xl p-5 sm:p-8 border border-gray-200 shadow-sm">
+            <div className="flex flex-col items-center text-center">
+              <Image
+                src="/airmedcarelogo.png"
+                alt="AirMedCare Network"
+                width={280}
+                height={80}
+                className="mb-6"
+              />
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                AirMedCare Network Affinity Group Membership Discount
+              </h3>
+              <p className="text-base text-gray-600 leading-relaxed max-w-3xl">
+                In order to receive a discount with AirMedCare, you must be an active Member of the Grayson County Chamber of Commerce. An alliance of affiliated air ambulance providers will offer a special group membership pricing rate to individuals who are affiliated with the Chamber of Commerce. For more information, you can reach AirMedCare Network at{" "}
+                <a href="tel:2706174317" className="text-green-700 font-semibold hover:underline">(270) 617-4317</a>.
+              </p>
+              <div className="mt-6 w-full max-w-2xl">
+                <Image
+                  src="/airpricing.jpg"
+                  alt="AirMedCare Network membership pricing"
+                  width={800}
+                  height={500}
+                  className="rounded-xl w-full h-auto"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* ChamberAdvantage Plan */}
+          <div className="mt-8 bg-white rounded-2xl p-5 sm:p-8 border border-gray-200 shadow-sm">
+            <div className="flex flex-col items-center text-center">
+              <Image
+                src="/athem.png"
+                alt="ChamberAdvantage Plan - Anthem"
+                width={280}
+                height={80}
+                className="mb-6"
+              />
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                ChamberAdvantage Plan
+              </h3>
+              <p className="text-base text-gray-600 leading-relaxed max-w-3xl mb-6">
+                Through a partnership with Anthem and the Kentucky Chamber, small businesses can access competitive, medically underwritten health insurance rates with fixed, predictable monthly payments.
+              </p>
+              <ul className="text-left max-w-2xl space-y-3 mb-6">
+                {[
+                  "Competitive, medically underwritten rates with fixed, predictable monthly payments",
+                  "A great alternative to ACA plans that can lead to significant savings for small businesses",
+                  "Discounted rates on Anthem dental, vision, life, and disability coverage",
+                  "Multiple plan designs and choices to fit your needs and budget",
+                  "Access to Anthem's broad network and pharmacy benefits",
+                  "Wide variety of wellness programs to keep employees healthy",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <svg
+                      className="w-5 h-5 text-green-500 shrink-0 mt-0.5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                    <span className="text-base text-gray-700">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <a
+                href="https://www.kychamber.com/anthem"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-green-700 text-white px-6 py-3 rounded-xl font-semibold hover:bg-green-800 transition-colors"
+              >
+                Learn More at KY Chamber
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          {/* Keystone Financial 401(k) */}
+          <div className="mt-8 bg-white rounded-2xl p-5 sm:p-8 border border-gray-200 shadow-sm">
+            <div className="flex flex-col items-center text-center">
+              <Image
+                src="/Keystone.jpg"
+                alt="Keystone Financial Group"
+                width={280}
+                height={80}
+                className="mb-6"
+              />
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                Keystone Financial 401(k) for Chamber Members
+              </h3>
+              <p className="text-base text-gray-600 leading-relaxed max-w-3xl mb-4">
+                Kentucky Thoroughbred&apos;s mission is to help companies compete effectively and profitably in a local, national, and global economy. The Kentucky Thoroughbred 401(k) Retirement Program is a Multiple Employer 401(k) Aggregation Program (MEAP) solution that can help companies reduce their fiduciary and administrative responsibilities while delivering an effective and competitive 401(k) benefit for their employees.
+              </p>
+              <div className="bg-gray-50 rounded-xl p-5 sm:p-6 mt-2 max-w-md">
+                <p className="text-sm font-semibold text-gray-900 mb-2">For more information, contact:</p>
+                <p className="text-base font-bold text-gray-900">Sean Melican</p>
+                <p className="text-sm text-gray-600">Keystone Financial Group, LLC</p>
+                <p className="text-sm text-gray-600">6013 Brownsboro Park Blvd, Ste A</p>
+                <p className="text-sm text-gray-600 mt-2">
+                  <a href="tel:5022063373" className="text-green-700 font-semibold hover:underline">(502) 206-3373 ext. 302</a>
+                </p>
+                <p className="text-sm text-gray-600">
+                  <a href="mailto:Sean.Melican@keystoneky.com" className="text-green-700 font-semibold hover:underline">Sean.Melican@keystoneky.com</a>
+                </p>
+              </div>
             </div>
           </div>
         </div>
