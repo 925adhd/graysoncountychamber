@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --no-import-alias --use-npm)",
+      "Bash(mkdir -p src/app src/components public)",
+      "Bash(cp images/logo.jpg public/logo.jpg)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(rm -rf .next)",
+      "Bash(npx next:*)",
+      "Bash(npm ls:*)",
+      "Bash(curl -s http://localhost:3002/_next/static/css/app/layout.css)",
+      "Bash(tasklist //fi 'imagename eq node.exe')",
+      "Bash(taskkill //f //im node.exe)",
+      "Bash(npx tsc:*)"
+    ]
+  }
+}
