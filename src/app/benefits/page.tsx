@@ -138,61 +138,13 @@ export default function BenefitsPage() {
     <>
       {/* Hero */}
       <section className="relative min-h-[140px] sm:min-h-[200px] flex items-center bg-green-800">
-        <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 text-center w-full">
+        <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 lg:py-20 text-center w-full">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
             Everything You Need to Grow Your Business &mdash; In One Membership
           </h1>
           <p className="mt-4 text-lg sm:text-xl text-gray-100 max-w-2xl mx-auto">
             Get visibility, connections, and real opportunities to grow your business.
           </p>
-        </div>
-      </section>
-
-      {/* What You Get — Quick Wins */}
-      <section className="py-14 sm:py-18 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 text-center">
-            What You Get as a Member
-          </h2>
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {[
-              {
-                headline: "Year-round visibility",
-                detail: "Get seen across our directory, social media, newsletters, and events.",
-              },
-              {
-                headline: "Exclusive referrals",
-                detail: "We recommend Chamber members first — putting your business ahead.",
-              },
-              {
-                headline: "Real connections",
-                detail: "Build relationships that turn into real customers.",
-              },
-              {
-                headline: "Money-saving perks",
-                detail: "Save on tools, services, and business essentials.",
-              },
-            ].map((item) => (
-              <div
-                key={item.headline}
-                className="flex gap-4 items-start bg-green-50 rounded-2xl p-6 border border-green-100"
-              >
-                <div className="shrink-0 mt-1">
-                  <svg className="w-7 h-7 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      fillRule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <p className="text-lg font-bold text-gray-900">{item.headline}</p>
-                  <p className="text-base text-gray-600 mt-1 leading-relaxed">{item.detail}</p>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
