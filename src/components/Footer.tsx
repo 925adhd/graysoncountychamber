@@ -95,6 +95,17 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Grayson County Chamber of
             Commerce. All rights reserved.
           </p>
+          <p>
+            Designed locally by{" "}
+            <a
+              href="https://studio925.design"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-400 hover:text-green-300 transition-colors"
+            >
+              Studio 925
+            </a>
+          </p>
         </div>
       </div>
     </footer>

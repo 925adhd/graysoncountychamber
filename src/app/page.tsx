@@ -19,51 +19,58 @@ function HeroSection() {
           className="object-cover object-[center_35%]"
           priority
         />
+        {/* Mobile: strong uniform overlay for readability. Desktop: directional gradient for visual depth */}
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 sm:hidden"
+          style={{
+            background:
+              "linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.55) 70%, rgba(0,0,0,0.7) 100%)",
+          }}
+        />
+        <div
+          className="absolute inset-0 hidden sm:block"
           style={{
             background:
               "linear-gradient(to right, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.25) 100%)",
           }}
         />
       </div>
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-36">
+      <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-14 sm:py-28 lg:py-36">
         <div className="max-w-3xl" style={{ textShadow: "0 2px 12px rgba(0,0,0,0.4)" }}>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight">
             Growing Stronger
             <span className="block" style={{ color: '#33a241' }}>Together</span>
           </h1>
-          <p className="mt-6 text-lg sm:text-xl lg:text-2xl text-white/90 leading-relaxed max-w-2xl">
-            The Grayson County Chamber of Commerce connects local businesses,
-            builds community, and helps your business thrive in the heart of
-            Kentucky.
+          <p className="mt-4 sm:mt-6 text-base sm:text-xl lg:text-2xl text-white/90 leading-relaxed max-w-2xl">
+            The Grayson County Chamber connects local businesses, builds
+            community, and helps your business thrive in the heart of Kentucky.
           </p>
-          <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <div className="mt-6 sm:mt-10 flex flex-col sm:flex-row gap-2.5 sm:gap-4">
             <Link
               href="/join"
-              className="inline-flex items-center justify-center bg-white text-green-700 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:bg-green-50 transition-colors shadow-lg"
+              className="inline-flex items-center justify-center bg-white text-green-700 px-5 sm:px-8 py-3 sm:py-4 rounded-lg sm:rounded-xl font-bold text-sm sm:text-lg hover:bg-green-50 transition-colors shadow-lg"
             >
               Join the Chamber
             </Link>
             <Link
               href="/benefits"
-              className="inline-flex items-center justify-center border-2 border-white text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl font-semibold text-base sm:text-lg hover:bg-white/10 transition-colors"
+              className="inline-flex items-center justify-center border-2 border-white/80 text-white px-5 sm:px-8 py-2.5 sm:py-4 rounded-lg sm:rounded-xl font-semibold text-sm sm:text-lg hover:bg-white/10 transition-colors"
             >
               Explore Benefits
             </Link>
           </div>
-          <div className="mt-6 flex flex-col sm:flex-row gap-4 sm:gap-6 text-white/80 text-base">
+          <div className="mt-4 sm:mt-6 flex flex-row sm:flex-row gap-5 sm:gap-6 text-white/70 sm:text-white/80 text-sm sm:text-base">
             <Link
               href="/directory"
               className="hover:text-white transition-colors underline underline-offset-4"
             >
-              View Local Businesses &rarr;
+              Local Businesses &rarr;
             </Link>
             <Link
               href="/events"
               className="hover:text-white transition-colors underline underline-offset-4"
             >
-              Upcoming Events &rarr;
+              Events &rarr;
             </Link>
           </div>
         </div>
