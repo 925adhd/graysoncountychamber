@@ -52,140 +52,14 @@ export default function JoinPage() {
   return (
     <>
       {/* Page Header */}
-      <section className="bg-gradient-to-br from-green-700 to-green-800 text-white py-16 sm:py-20">
+      <section className="bg-gradient-to-br from-green-700 to-green-800 text-white py-10 sm:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold">
-            Membership Application
+          <h1 className="text-3xl sm:text-5xl font-bold">
+            Join the Chamber
           </h1>
-          <p className="mt-4 text-lg sm:text-xl text-green-100 max-w-2xl mx-auto">
-            Invest in your business and your community. Find the membership
-            level that fits you.
+          <p className="mt-3 sm:mt-4 text-base sm:text-xl text-green-100 max-w-2xl mx-auto">
+            Find the membership level that fits your business.
           </p>
-        </div>
-      </section>
-
-      {/* Why Join Summary */}
-      <section className="py-16 sm:py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 text-center">
-            Why Businesses Join
-          </h2>
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {[
-              {
-                title: "Networking",
-                desc: "Monthly luncheons and events to build relationships with fellow business owners.",
-              },
-              {
-                title: "Visibility",
-                desc: "Directory listing, lobby advertising, social media promotion, and newsletter features.",
-              },
-              {
-                title: "Credibility",
-                desc: "We ONLY refer Chamber Members. Membership shows customers you are invested in the community.",
-              },
-              {
-                title: "Savings",
-                desc: "Constant Contact discounts, Office Depot savings, reduced Centre on Main rental rates, and more.",
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="bg-green-50 rounded-2xl p-6 border border-green-100"
-              >
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-base text-gray-600 leading-relaxed">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-          <div className="mt-8 text-center">
-            <Link
-              href="/benefits"
-              className="text-green-600 font-semibold text-lg hover:text-green-700 underline underline-offset-2"
-            >
-              View all member benefits &rarr;
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* President's Circle */}
-      <section className="py-16 sm:py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <span className="inline-block text-sm font-semibold text-green-400 bg-green-900/40 px-4 py-1.5 rounded-full mb-4">
-              Premium Membership
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold">
-              President&apos;s Circle
-            </h2>
-            <p className="mt-2 text-5xl font-bold text-green-400">$2,000</p>
-            <p className="mt-2 text-gray-400">
-              Annual investment (annual dues not included)
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {[
-              "Must be a Grayson County business for more than 10 years",
-              "Logo displayed on stand-up banner at all Chamber events",
-              "Company logo rotation on the Chamber website and monthly newsletter",
-              "First \"right of acceptance\" for Chamber sponsorships, publications, and special events",
-              "Short feature article about your organization in the Chamber Chatter",
-              "Annual Membership Dinner — presenting sponsor with preferred table seating and 8 tickets included",
-              "Complimentary invitation for one company representative to attend Leadership Grayson County",
-              "2 free seats at the Monthly Chamber Luncheons",
-              "Limited to 15 members — exclusive and prestigious",
-            ].map((item) => (
-              <div key={item} className="flex items-start gap-3">
-                <CheckCircleIcon className="w-6 h-6 text-green-400 shrink-0 mt-0.5" />
-                <span className="text-base text-gray-200">{item}</span>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div className="rounded-2xl overflow-hidden border border-gray-700">
-              <Image
-                src="/presidentscircle.jpg"
-                alt="President's Circle members"
-                width={400}
-                height={300}
-                className="w-full h-48 object-cover"
-              />
-            </div>
-            <div className="rounded-2xl overflow-hidden border border-gray-700">
-              <Image
-                src="/presidents2.jpg"
-                alt="President's Circle event"
-                width={400}
-                height={300}
-                className="w-full h-48 object-cover"
-              />
-            </div>
-            <div className="rounded-2xl overflow-hidden border border-gray-700">
-              <Image
-                src="/presidents3.jpg"
-                alt="President's Circle recognition"
-                width={400}
-                height={300}
-                className="w-full h-48 object-cover"
-              />
-            </div>
-          </div>
-
-          <div className="mt-10 text-center">
-            <a
-              href="tel:2702595587"
-              className="inline-flex items-center justify-center bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-green-700 transition-colors"
-            >
-              Inquire About President&apos;s Circle
-            </a>
-          </div>
         </div>
       </section>
 
@@ -242,6 +116,52 @@ export default function JoinPage() {
                 Join the Small Business Circle
               </a>
             </div>
+        </div>
+      </section>
+
+      {/* President's Circle */}
+      <section className="py-16 sm:py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <span className="inline-block text-sm font-semibold text-green-400 bg-green-900/40 px-4 py-1.5 rounded-full mb-4">
+              Premium Membership
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-bold">
+              President&apos;s Circle
+            </h2>
+            <p className="mt-2 text-5xl font-bold text-green-400">$2,000</p>
+            <p className="mt-2 text-gray-400">
+              Annual investment (annual dues not included)
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {[
+              "Must be a Grayson County business for more than 10 years",
+              "Logo displayed on stand-up banner at all Chamber events",
+              "Company logo rotation on the Chamber website and monthly newsletter",
+              "First \"right of acceptance\" for Chamber sponsorships, publications, and special events",
+              "Short feature article about your organization in the Chamber Chatter",
+              "Annual Membership Dinner — presenting sponsor with preferred table seating and 8 tickets included",
+              "Complimentary invitation for one company representative to attend Leadership Grayson County",
+              "2 free seats at the Monthly Chamber Luncheons",
+              "Limited to 15 members — exclusive and prestigious",
+            ].map((item) => (
+              <div key={item} className="flex items-start gap-3">
+                <CheckCircleIcon className="w-6 h-6 text-green-400 shrink-0 mt-0.5" />
+                <span className="text-base text-gray-200">{item}</span>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10 text-center">
+            <a
+              href="tel:2702595587"
+              className="inline-flex items-center justify-center bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-green-700 transition-colors"
+            >
+              Inquire About President&apos;s Circle
+            </a>
+          </div>
         </div>
       </section>
 

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import CountUp from "@/components/CountUp";
 import {
   UserGroupIcon,
   MegaphoneIcon,
@@ -191,11 +192,11 @@ function BenefitsPreviewSection() {
           </div>
           <div className="hidden lg:flex items-center justify-center">
             <div className="bg-gradient-to-br from-green-100 to-blue-50 rounded-3xl p-12 text-center">
-              <div className="text-6xl font-bold text-green-700">100+</div>
+              <div className="text-6xl font-bold text-green-700"><CountUp target={100} suffix="+" delay={0} /></div>
               <div className="text-xl text-gray-600 mt-2">
                 Local Businesses Trust the Chamber
               </div>
-              <div className="mt-8 text-5xl font-bold text-blue-600">50+</div>
+              <div className="mt-8 text-5xl font-bold text-blue-600"><CountUp target={50} suffix="+" delay={200} /></div>
               <div className="text-xl text-gray-600 mt-2">
                 Years Serving Grayson County
               </div>

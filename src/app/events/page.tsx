@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import CountUp from "@/components/CountUp";
 import {
   CalendarDaysIcon,
   ClockIcon,
@@ -294,17 +295,17 @@ export default function EventsPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-16">
             <div>
-              <div className="text-4xl sm:text-5xl font-bold text-green-600">100+</div>
+              <div className="text-4xl sm:text-5xl font-bold text-green-600"><CountUp target={100} suffix="+" delay={0} /></div>
               <p className="mt-2 text-gray-600">Professionals Attending Monthly</p>
             </div>
             <div className="hidden sm:block w-px h-16 bg-gray-200" />
             <div>
-              <div className="text-4xl sm:text-5xl font-bold text-green-600">12+</div>
+              <div className="text-4xl sm:text-5xl font-bold text-green-600"><CountUp target={12} suffix="+" delay={150} /></div>
               <p className="mt-2 text-gray-600">Events Every Year</p>
             </div>
             <div className="hidden sm:block w-px h-16 bg-gray-200" />
             <div>
-              <div className="text-4xl sm:text-5xl font-bold text-green-600">50+</div>
+              <div className="text-4xl sm:text-5xl font-bold text-green-600"><CountUp target={50} suffix="+" delay={300} /></div>
               <p className="mt-2 text-gray-600">Years of Community Events</p>
             </div>
           </div>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import CountUp from "@/components/CountUp";
 import {
   UserGroupIcon,
   MegaphoneIcon,
@@ -353,7 +354,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
             <div>
               <div className="text-4xl sm:text-5xl font-bold text-green-600">
-                100+
+                <CountUp target={100} suffix="+" delay={0} />
               </div>
               <p className="mt-2 text-lg text-gray-600">
                 Local Businesses
@@ -361,7 +362,7 @@ export default function AboutPage() {
             </div>
             <div>
               <div className="text-4xl sm:text-5xl font-bold text-green-600">
-                12+
+                <CountUp target={12} suffix="+" delay={150} />
               </div>
               <p className="mt-2 text-lg text-gray-600">
                 Events Annually
@@ -369,7 +370,7 @@ export default function AboutPage() {
             </div>
             <div>
               <div className="text-4xl sm:text-5xl font-bold text-green-600">
-                50+
+                <CountUp target={50} suffix="+" delay={300} />
               </div>
               <p className="mt-2 text-lg text-gray-600">
                 Years Serving

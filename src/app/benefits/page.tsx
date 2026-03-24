@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import CountUp from "@/components/CountUp";
 import {
   EyeIcon,
   UserGroupIcon,
@@ -112,25 +113,26 @@ const featureCards = [
 export default function BenefitsPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative min-h-[140px] sm:min-h-[200px] flex items-center bg-green-800">
-        <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 lg:py-20 text-center w-full">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
-            Everything You Need to Grow Your Business &mdash; In One Membership
+      {/* Hero — compact band on mobile, full on desktop */}
+      <section className="bg-green-800">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-16 lg:py-20 text-center">
+          <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white">
+            <span className="sm:hidden">Member Benefits</span>
+            <span className="hidden sm:inline">Everything You Need to Grow Your Business &mdash; In One Membership</span>
           </h1>
-          <p className="mt-4 text-lg sm:text-xl text-gray-100 max-w-2xl mx-auto">
+          <p className="hidden sm:block mt-4 text-lg sm:text-xl text-gray-100 max-w-2xl mx-auto">
             Get visibility, connections, and real opportunities to grow your business.
           </p>
         </div>
       </section>
 
       {/* Full Value Breakdown */}
-      <section className="py-16 sm:py-20 bg-gray-50">
+      <section className="pt-10 pb-16 sm:py-20 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 text-center">
+          <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 text-center">
             Included in Every Membership
           </h2>
-          <p className="mt-4 text-lg text-gray-600 text-center max-w-2xl mx-auto">
+          <p className="mt-2 sm:mt-4 text-base sm:text-lg text-gray-600 text-center max-w-2xl mx-auto">
             Everything included &mdash; no hidden tiers.
           </p>
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
@@ -368,21 +370,21 @@ export default function BenefitsPage() {
               <div className="flex justify-center mb-3">
                 <CalendarDaysIcon className="w-10 h-10 text-green-600" />
               </div>
-              <div className="text-5xl sm:text-6xl font-bold text-green-700">12+</div>
+              <div className="text-5xl sm:text-6xl font-bold text-green-700"><CountUp target={12} suffix="+" delay={0} /></div>
               <div className="text-gray-600 mt-2 text-lg">Events Per Year</div>
             </div>
             <div className="bg-white rounded-2xl p-5 sm:p-8 shadow-sm border border-green-100">
               <div className="flex justify-center mb-3">
                 <MegaphoneIcon className="w-10 h-10 text-green-600" />
               </div>
-              <div className="text-5xl sm:text-6xl font-bold text-green-700">365</div>
+              <div className="text-5xl sm:text-6xl font-bold text-green-700"><CountUp target={365} delay={150} /></div>
               <div className="text-gray-600 mt-2 text-lg">Days of Promotion</div>
             </div>
             <div className="bg-white rounded-2xl p-5 sm:p-8 shadow-sm border border-green-100">
               <div className="flex justify-center mb-3">
                 <UserGroupIcon className="w-10 h-10 text-green-600" />
               </div>
-              <div className="text-5xl sm:text-6xl font-bold text-green-700">100+</div>
+              <div className="text-5xl sm:text-6xl font-bold text-green-700"><CountUp target={100} suffix="+" delay={300} /></div>
               <div className="text-gray-600 mt-2 text-lg">Business Connections</div>
             </div>
           </div>

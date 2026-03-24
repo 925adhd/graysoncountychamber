@@ -13,13 +13,13 @@ export const metadata: Metadata = {
 export default function LeadershipPage() {
   return (
     <>
-      {/* Page Header */}
-      <section className="bg-gradient-to-br from-green-700 to-green-800 text-white py-10 sm:py-16 lg:py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
+      {/* Page Header — compact band on mobile, full on desktop */}
+      <section className="bg-gradient-to-br from-green-700 to-green-800 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-16 lg:py-20 text-center">
+          <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold">
             Chamber Leadership
           </h1>
-          <p className="mt-4 text-lg sm:text-xl text-green-100 max-w-2xl mx-auto">
+          <p className="hidden sm:block mt-4 text-lg sm:text-xl text-green-100 max-w-2xl mx-auto">
             Meet the local leaders working behind the scenes to support
             businesses, strengthen the community, and move Grayson County
             forward.
@@ -28,12 +28,12 @@ export default function LeadershipPage() {
       </section>
 
       {/* Board of Directors */}
-      <section className="py-16 sm:py-20">
+      <section className="pt-10 pb-16 sm:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
+          <h2 className="text-2xl sm:text-4xl font-bold text-gray-900">
             Meet the Board of Directors
           </h2>
-          <p className="mt-4 text-lg text-gray-600 leading-relaxed">
+          <p className="mt-2 sm:mt-4 text-base sm:text-lg text-gray-600 leading-relaxed">
             Our Board of Directors provides leadership, direction, and vision
             for the Chamber &mdash; ensuring we serve the needs of local
             businesses and the community.
