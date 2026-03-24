@@ -11,46 +11,53 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      {/* Page Header */}
-      <section className="relative text-white py-24 sm:py-32">
-        <Image
-          src="/boardofdirectors.png"
-          alt="Grayson County Chamber Board of Directors"
-          fill
-          className="object-cover"
-          style={{ objectPosition: '50% 25%' }}
-          priority
-        />
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.4) 30%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0) 100%)",
-          }}
-        />
-        <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold"
-            style={{ textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}
-          >
-            About the Chamber
-          </h1>
-          <p
-            className="mt-5 text-lg sm:text-xl lg:text-2xl text-gray-100 max-w-2xl mx-auto leading-relaxed"
-            style={{ textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}
-          >
-            Connecting businesses, creating opportunities, and strengthening
-            our community.
-          </p>
-          <p className="mt-3 text-base text-gray-300">
-            Serving Grayson County for 50+ years
-          </p>
+      {/* Banner Image */}
+      <section className="w-full">
+        <div className="relative w-full h-64 sm:h-80 md:h-96">
+          <Image
+            src="/boardofdirectors.png"
+            alt="Grayson County Chamber Board of Directors"
+            fill
+            className="object-cover"
+            style={{ objectPosition: '50% 25%' }}
+            priority
+          />
         </div>
       </section>
 
-      {/* Quick Value Strip */}
+      {/* Page Heading + Intro */}
+      <section className="pt-12 pb-10 sm:pt-16 sm:pb-14">
+        <div className="max-w-3xl mx-auto px-5 sm:px-6 lg:px-8">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
+            About the Chamber
+          </h1>
+          <p className="mt-4 sm:mt-5 text-xl sm:text-2xl text-gray-500 font-light leading-relaxed">
+            Connecting businesses across Grayson County
+          </p>
+          <span className="inline-block mt-5 sm:mt-6 px-4 py-1.5 text-sm font-semibold text-green-700 bg-green-50 rounded-full tracking-wide border border-green-100">
+            Serving Grayson County for 50+ years
+          </span>
+
+          <div className="mt-10 space-y-5 text-lg text-gray-600 leading-relaxed">
+            <p>
+              The Grayson County Chamber of Commerce brings together local businesses, organizations, and community leaders to support growth, strengthen connections, and move our community forward.
+            </p>
+            <p>
+              Whether you&apos;re a small business owner, a growing company, or someone looking to get involved locally, the Chamber creates opportunities to connect, promote, and succeed together.
+            </p>
+            <p className="text-green-700 font-medium">
+              At the center of it all is one goal: helping Grayson County thrive.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* What the Chamber Does - Icon Strip */}
       <section className="py-12 sm:py-14 border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">
+            What the Chamber Does
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {[
               {
@@ -60,7 +67,7 @@ export default function AboutPage() {
                   </svg>
                 ),
                 title: "Networking & Connections",
-                desc: "Build relationships that turn into real opportunities",
+                desc: "Build real relationships that lead to opportunities, partnerships, and growth.",
               },
               {
                 icon: (
@@ -69,7 +76,7 @@ export default function AboutPage() {
                   </svg>
                 ),
                 title: "Promotion & Visibility",
-                desc: "Get your business seen by the local community",
+                desc: "Get your business in front of the local community through events, features, and exposure.",
               },
               {
                 icon: (
@@ -78,7 +85,7 @@ export default function AboutPage() {
                   </svg>
                 ),
                 title: "Events & Growth",
-                desc: "Attend events that help you connect and grow",
+                desc: "Attend events designed to help you learn, connect, and grow your business.",
               },
               {
                 icon: (
@@ -87,7 +94,7 @@ export default function AboutPage() {
                   </svg>
                 ),
                 title: "Resources & Support",
-                desc: "Access tools and guidance for business success",
+                desc: "Access tools, guidance, and a network that helps you move forward with confidence.",
               },
             ].map((item) => (
               <div key={item.title} className="flex items-start gap-4">
@@ -112,8 +119,7 @@ export default function AboutPage() {
               See the Chamber in Action
             </h2>
             <p className="mt-2 text-lg text-gray-600">
-              From networking events to community gatherings, this is where
-              connections happen.
+              From networking events to community gatherings, this is what it looks like when local businesses come together.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -155,7 +161,7 @@ export default function AboutPage() {
             </div>
             <div className="rounded-2xl overflow-hidden shadow-md">
               <Image
-                src="/groupphoto.jpg"
+                src="/about1.jpg"
                 alt="Chamber group photo"
                 width={600}
                 height={400}
@@ -193,7 +199,7 @@ export default function AboutPage() {
                 $1,000 High School Senior Scholarship
               </h2>
               <p className="mt-4 text-lg text-gray-600 leading-relaxed">
-                Every Spring, the Chamber accepts applications for the Annual High School Senior Scholarship. If you are interested, please contact the Grayson County Chamber for requirements and application directions.
+                The Chamber isn&apos;t just about business. Every spring, we invest in the next generation by awarding a scholarship to a local high school senior. It&apos;s one of the ways we give back to the community that supports us.
               </p>
               <p className="mt-5 text-lg text-green-700 font-semibold">
                 Contact the Chamber at (270) 259-5587 for details.
@@ -211,20 +217,10 @@ export default function AboutPage() {
           </h2>
           <div className="mt-8 space-y-5 text-lg text-gray-600 leading-relaxed">
             <p>
-              When you join the Chamber, you&apos;re investing in more than your
-              business &mdash; you&apos;re investing in the{" "}
-              <strong className="text-gray-900">entire community</strong>.
+              Becoming a Chamber member means more than joining a network. It&apos;s about increasing your visibility, building meaningful connections, and being part of something bigger in Grayson County.
             </p>
             <p>
-              We help local businesses grow, create new opportunities, and build
-              a stronger Grayson County.
-            </p>
-            <p>
-              As the{" "}
-              <strong className="text-gray-900">
-                voice of the business community
-              </strong>
-              , we advocate for growth, connection, and long-term success.
+              As a member, you gain access to opportunities that help your business grow while also contributing to the success of the entire community.
             </p>
           </div>
         </div>
@@ -244,9 +240,7 @@ export default function AboutPage() {
                 Our Mission
               </h3>
               <p className="text-lg text-gray-600 leading-relaxed">
-                To promote the civic, commercial, and general interests of
-                Grayson County &mdash; creating an environment where businesses
-                thrive and the community grows stronger together.
+                To support local businesses and strengthen our community by creating opportunities for growth, connection, and success.
               </p>
             </div>
 
@@ -261,8 +255,7 @@ export default function AboutPage() {
                 Our Vision
               </h3>
               <p className="text-lg text-gray-600 leading-relaxed">
-                A thriving Grayson County where businesses of all sizes have the
-                resources, connections, and support they need to succeed.
+                To be a driving force in building a stronger, more connected Grayson County where businesses and people thrive together.
               </p>
             </div>
           </div>
@@ -277,26 +270,13 @@ export default function AboutPage() {
           </h2>
           <div className="mt-8 space-y-5 text-lg text-gray-600 leading-relaxed">
             <p>
-              Grayson County is more than just a place on the map. It&apos;s a
-              community defined by its people &mdash;{" "}
-              <strong className="text-gray-900">
-                hardworking, generous, and deeply connected
-              </strong>
-              .
+              Grayson County is more than just a place to do business. It&apos;s a community where people support each other, where local businesses matter, and where growth is happening every day.
             </p>
             <p>
-              With a{" "}
-              <strong className="text-gray-900">rich history</strong>,
-              natural beauty, and a central location connecting to major markets,
-              Grayson County offers something special for business owners.
+              From new developments and education opportunities to our lakes, local shops, and hometown feel, this is a place people are proud to live and work.
             </p>
             <p>
-              Leitchfield, the county seat, is the{" "}
-              <strong className="text-gray-900">
-                hub of commerce and community life
-              </strong>
-              &mdash; a town where local businesses are the backbone of the
-              economy and new ideas are welcomed.
+              And at the center of it all is a business community that continues to move forward together.
             </p>
           </div>
         </div>
@@ -333,29 +313,24 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* What the Chamber Does */}
+      {/* What the Chamber Does for You */}
       <section className="py-16 sm:py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
-            What the Chamber Actually Does for You
+            What the Chamber Does for You
           </h2>
           <p className="mt-4 text-lg text-gray-600 leading-relaxed max-w-2xl">
-            We&apos;re a{" "}
-            <strong className="text-gray-900">
-              member-driven organization
-            </strong>{" "}
-            funded by local business owners who believe in collaboration. Here&apos;s
-            what we do every day:
+            We&apos;re a member-driven organization funded by local business owners who believe in working together. Here&apos;s what that looks like:
           </p>
 
           <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-5">
             {[
-              "Advocate for business-friendly policies and economic development",
-              "Organize networking events, luncheons, and community gatherings",
-              "Promote member businesses through marketing and referrals",
-              "Welcome new businesses with ribbon cuttings and celebrations",
-              "Provide resources for starting and growing a business",
-              "Connect businesses with each other and the community",
+              "Helps you get discovered by the local community",
+              "Connects you with other business owners and leaders",
+              "Gives you opportunities to promote your business",
+              "Keeps you informed about local opportunities and events",
+              "Supports your growth with resources and guidance",
+              "Welcomes new businesses with ribbon cuttings and celebrations",
             ].map((text) => (
               <div
                 key={text}

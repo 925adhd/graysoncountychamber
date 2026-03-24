@@ -253,11 +253,11 @@ export default function LeadershipPage() {
           </p>
           <div className="mt-8 rounded-2xl overflow-hidden border border-green-100 shadow-sm">
             <Image
-              src="/halloffame.jpg"
-              alt="Chamber Hall of Fame inductees"
-              width={900}
-              height={600}
-              className="w-full h-auto object-cover"
+                src="/halloffame.jpg"
+                alt="Chamber Hall of Fame inductees"
+                width={900}
+                height={600}
+                className="w-full h-60 sm:h-96 object-cover object-center"
             />
           </div>
         </div>

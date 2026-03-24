@@ -31,7 +31,7 @@ function HeroSection() {
         <div className="max-w-3xl" style={{ textShadow: "0 2px 12px rgba(0,0,0,0.4)" }}>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
             Growing Stronger
-            <span className="block text-green-300">Together</span>
+            <span className="block" style={{ color: '#33a241' }}>Together</span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl lg:text-2xl text-white/90 leading-relaxed max-w-2xl">
             The Grayson County Chamber of Commerce connects local businesses,
