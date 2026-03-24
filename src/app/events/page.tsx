@@ -80,9 +80,9 @@ const upcomingEvents = [
     time: "Varies",
     location: "Local Businesses, Grayson County",
     description:
-      "Shop local events that encourage residents to visit and support small businesses throughout Grayson County.",
+      "Shop local events that encourage residents to visit and support small businesses throughout Grayson County. Participants pick up swag bags filled with goodies from local shops along the way.",
     tag: "Seasonal",
-    image: "/festival.jpg",
+    image: "/fallbags.jpg",
     category: "community",
   },
   {

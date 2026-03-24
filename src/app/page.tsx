@@ -45,15 +45,14 @@ function HeroSection() {
           }}
         />
       </div>
-      <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-14 sm:py-28 lg:py-36">
-        <div className="max-w-3xl" style={{ textShadow: "0 2px 12px rgba(0,0,0,0.4)" }}>
+      <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-14 sm:pt-20 sm:pb-28 lg:pt-24 lg:pb-36">
+        <div className="max-w-4xl" style={{ textShadow: "0 2px 12px rgba(0,0,0,0.4)" }}>
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-            Growing Stronger
-            <span className="block" style={{ color: '#33a241' }}>Together</span>
+            Growing Stronger <span style={{ color: '#33a241' }}>Together</span>
           </h1>
-          <p className="mt-4 sm:mt-6 text-base sm:text-xl lg:text-2xl text-white/90 leading-relaxed max-w-2xl">
-            The Grayson County Chamber connects local businesses, builds
-            community, and helps your business thrive in the heart of Kentucky.
+          <p className="mt-4 sm:mt-[2.16rem] text-base sm:text-xl lg:text-2xl text-white/90 leading-relaxed max-w-2xl">
+            The Grayson County Chamber connects local businesses,<br className="hidden sm:inline" />
+            builds community, and helps your business thrive in the heart of Kentucky.
           </p>
           <div className="mt-6 sm:mt-10 flex flex-col sm:flex-row gap-2.5 sm:gap-4">
             <Link
