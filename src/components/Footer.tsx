@@ -96,7 +96,7 @@ export default function Footer() {
             Commerce. All rights reserved.
           </p>
           <p>
-            Designed locally by{" "}
+            Website designed locally by{" "}
             <a
               href="https://studio925.design"
               target="_blank"
