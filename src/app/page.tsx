@@ -225,8 +225,8 @@ function EventsPreviewSection() {
         "Join fellow business leaders for lunch, networking, and a guest speaker. The easiest way to stay connected.",
       label: "Monthly",
       icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
         </svg>
       ),
     },
@@ -236,8 +236,8 @@ function EventsPreviewSection() {
         "Relax, network, and tour a local business. A casual evening event hosted at rotating member locations.",
       label: "Quarterly",
       icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
         </svg>
       ),
     },
@@ -247,8 +247,8 @@ function EventsPreviewSection() {
         "Celebrate new businesses and expansions with the community. We love welcoming new members.",
       label: "Ongoing",
       icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.121 15.536c-1.171 1.952-3.07 1.952-4.242 0-1.172-1.953-1.172-5.119 0-7.072 1.171-1.952 3.07-1.952 4.242 0M8 10.5h4m-4 3h4m9-1.5a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
         </svg>
       ),
     },
@@ -269,10 +269,15 @@ function EventsPreviewSection() {
           {events.map((event) => (
             <div
               key={event.title}
-              className="bg-white rounded-2xl p-5 sm:p-8 shadow-sm border border-green-100"
+              className="group bg-white rounded-2xl p-5 sm:p-8 shadow-sm border border-green-100 transition-shadow duration-200 hover:shadow-md"
             >
-              <div className="text-green-600 mb-3">{event.icon}</div>
-              <span className="inline-block mb-3 text-sm font-semibold text-green-600 bg-green-100 px-3 py-1 rounded-full">
+              <div
+                className="w-12 h-12 rounded-full flex items-center justify-center mb-5 transition-transform duration-200 group-hover:scale-110"
+                style={{ backgroundColor: 'rgba(51, 162, 65, 0.1)' }}
+              >
+                <div style={{ color: '#33a241' }}>{event.icon}</div>
+              </div>
+              <span className="inline-block mb-4 text-sm font-semibold px-3 py-1 rounded-full" style={{ color: '#33a241', backgroundColor: 'rgba(51, 162, 65, 0.1)' }}>
                 {event.label}
               </span>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
