@@ -123,30 +123,10 @@ export default function LeadershipPage() {
           </h2>
           <p className="mt-4 text-lg text-gray-600 leading-relaxed max-w-3xl">
             Ambassadors help welcome new businesses, support events, and
-            represent the Chamber in the community. They serve at official
-            functions including:
+            represent the Chamber in the community.
           </p>
 
-          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {[
-              "Grand Openings",
-              "Ribbon Cuttings",
-              "Ground-Breakings",
-              "Community Event Ceremonies",
-              "Welcoming Visiting Dignitaries",
-              "Other Official Chamber Functions",
-            ].map((item) => (
-              <div
-                key={item}
-                className="flex items-center gap-3 bg-white rounded-xl p-4 border border-gray-200"
-              >
-                <CheckCircleIcon className="w-5 h-5 text-green-500 shrink-0" />
-                <span className="text-gray-800 font-medium">{item}</span>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-10 rounded-2xl overflow-hidden border border-gray-200">
+          <div className="mt-8 rounded-2xl overflow-hidden border border-gray-200">
             <Image
               src="/ambassador.jpg"
               alt="Grayson County Chamber Ambassadors"
@@ -154,6 +134,25 @@ export default function LeadershipPage() {
               height={500}
               className="w-full h-auto object-cover"
             />
+          </div>
+
+          <div className="mt-6 grid grid-cols-2 sm:flex sm:flex-wrap gap-2.5">
+            {[
+              "Grand Openings",
+              "Ribbon Cuttings",
+              "Ground-Breakings",
+              "Community Events",
+              "Visiting Dignitaries",
+              "Official Chamber Functions",
+            ].map((item) => (
+              <span
+                key={item}
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-green-700 bg-green-50 px-3.5 py-2 rounded-full border border-green-100"
+              >
+                <CheckCircleIcon className="w-4 h-4 text-green-500 shrink-0" />
+                {item}
+              </span>
+            ))}
           </div>
 
           <div className="mt-8 bg-white rounded-2xl p-5 sm:p-8 border border-gray-200 flex flex-col sm:flex-row gap-6 items-start">
