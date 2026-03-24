@@ -1,6 +1,22 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import {
+  EyeIcon,
+  UserGroupIcon,
+  Cog6ToothIcon,
+  ArrowTrendingUpIcon,
+  MegaphoneIcon,
+  ShieldCheckIcon,
+  ScissorsIcon,
+  BriefcaseIcon,
+  CalendarDaysIcon,
+  EnvelopeIcon,
+  CreditCardIcon,
+  BuildingOffice2Icon,
+  ArrowTopRightOnSquareIcon,
+} from "@heroicons/react/24/outline";
+import { CheckCircleIcon } from "@heroicons/react/20/solid";
 
 export const metadata: Metadata = {
   title: "Member Benefits",
@@ -11,12 +27,7 @@ export const metadata: Metadata = {
 const benefitGroups = [
   {
     category: "Get Seen",
-    icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-      </svg>
-    ),
+    icon: <EyeIcon className="w-7 h-7" />,
     items: [
       "Online directory listing seen by locals and visitors",
       "Business referrals — we ONLY refer members",
@@ -29,11 +40,7 @@ const benefitGroups = [
   },
   {
     category: "Meet the Right People",
-    icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-      </svg>
-    ),
+    icon: <UserGroupIcon className="w-7 h-7" />,
     items: [
       "Monthly luncheons & Business After Hours",
       "Ribbon cuttings for your milestones",
@@ -43,12 +50,7 @@ const benefitGroups = [
   },
   {
     category: "Tools to Grow Faster",
-    icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-      </svg>
-    ),
+    icon: <Cog6ToothIcon className="w-7 h-7" />,
     items: [
       "FREE job and internship postings to reach local talent",
       "Member-only marketing tools",
@@ -58,11 +60,7 @@ const benefitGroups = [
   },
   {
     category: "Be Part of Something Bigger",
-    icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-      </svg>
-    ),
+    icon: <ArrowTrendingUpIcon className="w-7 h-7" />,
     items: [
       "Leadership Grayson County — an eight-month program to learn community issues and prepare for a greater role in our community's development",
       "LEAD with Extension leadership classes",
@@ -77,61 +75,37 @@ const featureCards = [
     title: "Get Discovered by Local Customers",
     description:
       "Featured in our directory, social media, email marketing, and events — putting you in front of the people who matter most.",
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
-      </svg>
-    ),
+    icon: <MegaphoneIcon className="w-8 h-8" />,
   },
   {
     title: "Be the Trusted Recommendation",
     description:
       "We ONLY refer Chamber Members. When someone asks for a recommendation, your business comes first.",
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-      </svg>
-    ),
+    icon: <ShieldCheckIcon className="w-8 h-8" />,
   },
   {
     title: "Build Relationships That Drive Revenue",
     description:
       "Luncheons, After Hours, and community events connect you with business owners, leaders, and potential customers.",
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-      </svg>
-    ),
+    icon: <UserGroupIcon className="w-8 h-8" />,
   },
   {
     title: "Celebrate Your Milestones",
     description:
       "We organize ribbon cuttings to celebrate your success and generate buzz in the community.",
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.121 15.536c-1.171 1.952-3.07 1.952-4.242 0-1.172-1.953-1.172-5.119 0-7.072 1.171-1.952 3.07-1.952 4.242 0M8 10.5h4m-4 3h4m9-1.5a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
+    icon: <ScissorsIcon className="w-8 h-8" />,
   },
   {
     title: "Hire Local Talent for Free",
     description:
       "Post job openings at no cost. Reach qualified candidates through our network instead of expensive job boards.",
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-      </svg>
-    ),
+    icon: <BriefcaseIcon className="w-8 h-8" />,
   },
   {
     title: "Grow as a Leader",
     description:
       "Leadership programs and classes offered every Spring and Fall to help you and your team develop new skills.",
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-      </svg>
-    ),
+    icon: <ArrowTrendingUpIcon className="w-8 h-8" />,
   },
 ];
 
@@ -176,17 +150,7 @@ export default function BenefitsPage() {
                 <ul className="space-y-3">
                   {group.items.map((item) => (
                     <li key={item} className="flex items-start gap-3">
-                      <svg
-                        className="w-5 h-5 text-green-500 shrink-0 mt-0.5"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
+                      <CheckCircleIcon className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
                       <span className="text-base text-gray-700">{item}</span>
                     </li>
                   ))}
@@ -243,9 +207,7 @@ export default function BenefitsPage() {
             <div className="bg-white rounded-2xl p-5 sm:p-8 border border-gray-200 shadow-sm flex flex-col">
               <div className="flex items-center gap-3 mb-4">
                 <div className="text-green-600 bg-green-50 rounded-xl p-2.5">
-                  <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
+                  <EnvelopeIcon className="w-7 h-7" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900">
                   Constant Contact
@@ -260,9 +222,7 @@ export default function BenefitsPage() {
             <div className="bg-white rounded-2xl p-5 sm:p-8 border border-gray-200 shadow-sm flex flex-col">
               <div className="flex items-center gap-3 mb-4">
                 <div className="text-green-600 bg-green-50 rounded-xl p-2.5">
-                  <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
-                  </svg>
+                  <CreditCardIcon className="w-7 h-7" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900">
                   Infintech Group Rate Merchant Processing
@@ -275,9 +235,7 @@ export default function BenefitsPage() {
             <div className="bg-white rounded-2xl p-5 sm:p-8 border border-gray-200 shadow-sm flex flex-col">
               <div className="flex items-center gap-3 mb-4">
                 <div className="text-green-600 bg-green-50 rounded-xl p-2.5">
-                  <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                  </svg>
+                  <BuildingOffice2Icon className="w-7 h-7" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900">
                   Office Depot Discounts
@@ -345,17 +303,7 @@ export default function BenefitsPage() {
                   "Wide variety of wellness programs to keep employees healthy",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <svg
-                      className="w-5 h-5 text-green-500 shrink-0 mt-0.5"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
+                    <CheckCircleIcon className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
                     <span className="text-base text-gray-700">{item}</span>
                   </li>
                 ))}
@@ -367,9 +315,7 @@ export default function BenefitsPage() {
                 className="inline-flex items-center gap-2 bg-green-700 text-white px-6 py-3 rounded-xl font-semibold hover:bg-green-800 transition-colors"
               >
                 Learn More at KY Chamber
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
+                <ArrowTopRightOnSquareIcon className="w-4 h-4" />
               </a>
             </div>
           </div>
@@ -420,27 +366,21 @@ export default function BenefitsPage() {
           <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-8">
             <div className="bg-white rounded-2xl p-5 sm:p-8 shadow-sm border border-green-100">
               <div className="flex justify-center mb-3">
-                <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
+                <CalendarDaysIcon className="w-10 h-10 text-green-600" />
               </div>
               <div className="text-5xl sm:text-6xl font-bold text-green-700">12+</div>
               <div className="text-gray-600 mt-2 text-lg">Events Per Year</div>
             </div>
             <div className="bg-white rounded-2xl p-5 sm:p-8 shadow-sm border border-green-100">
               <div className="flex justify-center mb-3">
-                <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
-                </svg>
+                <MegaphoneIcon className="w-10 h-10 text-green-600" />
               </div>
               <div className="text-5xl sm:text-6xl font-bold text-green-700">365</div>
               <div className="text-gray-600 mt-2 text-lg">Days of Promotion</div>
             </div>
             <div className="bg-white rounded-2xl p-5 sm:p-8 shadow-sm border border-green-100">
               <div className="flex justify-center mb-3">
-                <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
+                <UserGroupIcon className="w-10 h-10 text-green-600" />
               </div>
               <div className="text-5xl sm:text-6xl font-bold text-green-700">100+</div>
               <div className="text-gray-600 mt-2 text-lg">Business Connections</div>

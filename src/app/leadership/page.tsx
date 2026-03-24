@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import { CheckCircleIcon } from "@heroicons/react/20/solid";
 
 export const metadata: Metadata = {
   title: "Chamber Leadership",
@@ -107,9 +109,7 @@ export default function LeadershipPage() {
               className="inline-flex items-center gap-2 bg-green-700 text-white px-8 py-3 rounded-xl font-semibold text-lg hover:bg-green-800 transition-colors shadow-sm"
             >
               Learn More About YP
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
+              <ArrowRightIcon className="w-5 h-5" />
             </Link>
           </div>
         </div>
@@ -140,17 +140,7 @@ export default function LeadershipPage() {
                 key={item}
                 className="flex items-center gap-3 bg-white rounded-xl p-4 border border-gray-200"
               >
-                <svg
-                  className="w-5 h-5 text-green-500 shrink-0"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+                <CheckCircleIcon className="w-5 h-5 text-green-500 shrink-0" />
                 <span className="text-gray-800 font-medium">{item}</span>
               </div>
             ))}

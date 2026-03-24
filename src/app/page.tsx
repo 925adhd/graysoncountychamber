@@ -1,6 +1,16 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import {
+  UserGroupIcon,
+  MegaphoneIcon,
+  ArrowTrendingUpIcon,
+  WrenchScrewdriverIcon,
+  CalendarDaysIcon,
+  ScissorsIcon,
+  ArrowLongRightIcon,
+} from "@heroicons/react/24/outline";
+import { CheckCircleIcon } from "@heroicons/react/20/solid";
 
 export const metadata: Metadata = {
   title: "Grayson County Chamber of Commerce | Growing Together",
@@ -82,41 +92,25 @@ function HeroSection() {
 function WhyJoinSection() {
   const reasons = [
     {
-      icon: (
-        <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-        </svg>
-      ),
+      icon: <UserGroupIcon className="w-10 h-10" />,
       title: "Real Connections That Turn Into Customers",
       description:
         "Build relationships with local business owners that lead to real opportunities.",
     },
     {
-      icon: (
-        <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
-        </svg>
-      ),
+      icon: <MegaphoneIcon className="w-10 h-10" />,
       title: "Get Your Business Seen Year-Round",
       description:
         "Promote your business through our directory, events, and community exposure.",
     },
     {
-      icon: (
-        <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-        </svg>
-      ),
+      icon: <ArrowTrendingUpIcon className="w-10 h-10" />,
       title: "Grow With a Strong Local Network",
       description:
         "Be part of a community that supports and refers each other.",
     },
     {
-      icon: (
-        <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-        </svg>
-      ),
+      icon: <WrenchScrewdriverIcon className="w-10 h-10" />,
       title: "Tools & Support to Help You Succeed",
       description:
         "Access resources, guidance, and opportunities designed for local businesses.",
@@ -182,17 +176,7 @@ function BenefitsPreviewSection() {
             <ul className="mt-8 space-y-4">
               {benefits.map((benefit) => (
                 <li key={benefit} className="flex items-start gap-3">
-                  <svg
-                    className="w-6 h-6 text-green-500 shrink-0 mt-0.5"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
+                  <CheckCircleIcon className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
                   <span className="text-base sm:text-lg text-gray-700">
                     {benefit}
                   </span>
@@ -231,33 +215,21 @@ function EventsPreviewSection() {
       description:
         "Join fellow business leaders for lunch, networking, and a guest speaker. The easiest way to stay connected.",
       label: "Monthly",
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-        </svg>
-      ),
+      icon: <CalendarDaysIcon className="w-6 h-6" />,
     },
     {
       title: "Business After Hours",
       description:
         "Relax, network, and tour a local business. A casual evening event hosted at rotating member locations.",
       label: "Quarterly",
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-        </svg>
-      ),
+      icon: <UserGroupIcon className="w-6 h-6" />,
     },
     {
       title: "Ribbon Cuttings",
       description:
         "Celebrate new businesses and expansions with the community. We love welcoming new members.",
       label: "Ongoing",
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-        </svg>
-      ),
+      icon: <ScissorsIcon className="w-6 h-6" />,
     },
   ];
 
@@ -302,19 +274,7 @@ function EventsPreviewSection() {
             className="inline-flex items-center text-green-600 font-semibold text-lg hover:text-green-700 transition-colors"
           >
             View All Events
-            <svg
-              className="w-5 h-5 ml-2"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
+            <ArrowLongRightIcon className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>

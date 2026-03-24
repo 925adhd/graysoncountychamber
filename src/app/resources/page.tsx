@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 
 export const metadata: Metadata = {
   title: "Community Resources",
@@ -110,19 +111,7 @@ export default function ResourcesPage() {
                       className="bg-white rounded-xl p-4 sm:p-5 border border-gray-200 hover:border-green-300 hover:shadow-md transition-all group flex items-center gap-4"
                     >
                       <div className="bg-green-50 rounded-lg p-2 shrink-0 group-hover:bg-green-100 transition-colors">
-                        <svg
-                          className="w-6 h-6 text-green-600"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={1.5}
-                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                          />
-                        </svg>
+                        <ArrowTopRightOnSquareIcon className="w-6 h-6 text-green-600" />
                       </div>
                       <span className="text-base sm:text-lg font-medium text-gray-900 group-hover:text-green-600 transition-colors">
                         {item.name}

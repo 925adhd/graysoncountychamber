@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import { ChevronRightIcon } from "@heroicons/react/24/outline";
 
 export const metadata: Metadata = {
   title: "Starting a Business",
@@ -268,7 +269,7 @@ export default function StartBusinessPage() {
             >
               <h3 className="font-bold text-gray-900 group-hover:text-green-600 text-lg flex items-center gap-2">
                 New Business Checklist
-                <svg className="w-4 h-4 shrink-0 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                <ChevronRightIcon className="w-4 h-4 shrink-0 transition-transform group-hover:translate-x-1" />
               </h3>
               <p className="mt-2 text-gray-600">
                 Kentucky One Stop Portal checklist to make sure you cover all
@@ -283,7 +284,7 @@ export default function StartBusinessPage() {
             >
               <h3 className="font-bold text-gray-900 group-hover:text-green-600 text-lg flex items-center gap-2">
                 Kentucky Business Costs
-                <svg className="w-4 h-4 shrink-0 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                <ChevronRightIcon className="w-4 h-4 shrink-0 transition-transform group-hover:translate-x-1" />
               </h3>
               <p className="mt-2 text-gray-600">
                 Explore utilities, incentives, and low-cost options for

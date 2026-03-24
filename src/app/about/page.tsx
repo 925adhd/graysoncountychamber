@@ -1,6 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import {
+  UserGroupIcon,
+  MegaphoneIcon,
+  CalendarDaysIcon,
+  WrenchScrewdriverIcon,
+  BoltIcon,
+  EyeIcon,
+  CheckCircleIcon,
+} from "@heroicons/react/24/outline";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -62,36 +71,28 @@ export default function AboutPage() {
             {[
               {
                 icon: (
-                  <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
+                  <UserGroupIcon className="w-7 h-7" />
                 ),
                 title: "Networking & Connections",
                 desc: "Build real relationships that lead to opportunities, partnerships, and growth.",
               },
               {
                 icon: (
-                  <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
-                  </svg>
+                  <MegaphoneIcon className="w-7 h-7" />
                 ),
                 title: "Promotion & Visibility",
                 desc: "Get your business in front of the local community through events, features, and exposure.",
               },
               {
                 icon: (
-                  <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
+                  <CalendarDaysIcon className="w-7 h-7" />
                 ),
                 title: "Events & Growth",
                 desc: "Attend events designed to help you learn, connect, and grow your business.",
               },
               {
                 icon: (
-                  <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-                  </svg>
+                  <WrenchScrewdriverIcon className="w-7 h-7" />
                 ),
                 title: "Resources & Support",
                 desc: "Access tools, guidance, and a network that helps you move forward with confidence.",
@@ -232,9 +233,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
             <div className="bg-white rounded-2xl p-6 sm:p-8 lg:p-12 shadow-md border border-gray-100">
               <div className="bg-green-50 rounded-xl w-14 h-14 flex items-center justify-center mb-6">
-                <svg className="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
+                <BoltIcon className="w-7 h-7 text-green-600" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
                 Our Mission
@@ -246,10 +245,7 @@ export default function AboutPage() {
 
             <div className="bg-white rounded-2xl p-6 sm:p-8 lg:p-12 shadow-md border border-gray-100">
               <div className="bg-blue-50 rounded-xl w-14 h-14 flex items-center justify-center mb-6">
-                <svg className="w-7 h-7 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                </svg>
+                <EyeIcon className="w-7 h-7 text-blue-500" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
                 Our Vision
@@ -337,9 +333,7 @@ export default function AboutPage() {
                 className="flex items-start gap-4 bg-white rounded-xl p-5 border border-gray-100 shadow-sm"
               >
                 <div className="text-green-500 shrink-0 mt-0.5">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
+                  <CheckCircleIcon className="w-5 h-5" />
                 </div>
                 <span className="text-base sm:text-lg text-gray-700 leading-relaxed">
                   {text}

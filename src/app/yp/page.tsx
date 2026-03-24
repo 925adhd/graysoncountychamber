@@ -1,6 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import {
+  EyeIcon,
+  BoltIcon,
+  UserGroupIcon,
+  BookOpenIcon,
+  HeartIcon,
+  ArrowRightIcon,
+} from "@heroicons/react/24/outline";
 
 export const metadata: Metadata = {
   title: "Young Professionals of Grayson County",
@@ -58,10 +66,7 @@ export default function YPPage() {
             <div className="bg-white rounded-2xl p-5 sm:p-8 border border-gray-200 shadow-sm">
               <div className="flex items-center gap-3 mb-4">
                 <div className="text-green-600 bg-green-50 rounded-xl p-2.5">
-                  <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                  </svg>
+                  <EyeIcon className="w-7 h-7" strokeWidth={1.5} />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900">Our Vision</h3>
               </div>
@@ -72,9 +77,7 @@ export default function YPPage() {
             <div className="bg-white rounded-2xl p-5 sm:p-8 border border-gray-200 shadow-sm">
               <div className="flex items-center gap-3 mb-4">
                 <div className="text-green-600 bg-green-50 rounded-xl p-2.5">
-                  <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
+                  <BoltIcon className="w-7 h-7" strokeWidth={1.5} />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900">Our Mission</h3>
               </div>
@@ -99,9 +102,7 @@ export default function YPPage() {
             <div className="bg-white rounded-2xl p-5 sm:p-8 border border-gray-200 shadow-sm text-center">
               <div className="flex justify-center mb-4">
                 <div className="text-green-600 bg-green-50 rounded-xl p-3">
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
+                  <UserGroupIcon className="w-8 h-8" strokeWidth={1.5} />
                 </div>
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-2">Networking Events</h3>
@@ -110,9 +111,7 @@ export default function YPPage() {
             <div className="bg-white rounded-2xl p-5 sm:p-8 border border-gray-200 shadow-sm text-center">
               <div className="flex justify-center mb-4">
                 <div className="text-green-600 bg-green-50 rounded-xl p-3">
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                  </svg>
+                  <BookOpenIcon className="w-8 h-8" strokeWidth={1.5} />
                 </div>
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-2">Educational Programs</h3>
@@ -121,9 +120,7 @@ export default function YPPage() {
             <div className="bg-white rounded-2xl p-5 sm:p-8 border border-gray-200 shadow-sm text-center">
               <div className="flex justify-center mb-4">
                 <div className="text-green-600 bg-green-50 rounded-xl p-3">
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                  </svg>
+                  <HeartIcon className="w-8 h-8" strokeWidth={1.5} />
                 </div>
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-2">Community Service</h3>
@@ -196,9 +193,7 @@ export default function YPPage() {
               className="inline-flex items-center justify-center bg-white text-green-700 px-6 sm:px-10 py-4 rounded-xl font-bold text-lg hover:bg-green-50 transition-colors shadow-lg"
             >
               Email to Join
-              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
+              <ArrowRightIcon className="w-5 h-5 ml-2" strokeWidth={2} />
             </a>
             <Link
               href="/join"
