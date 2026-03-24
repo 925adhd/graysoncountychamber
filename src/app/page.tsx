@@ -26,7 +26,7 @@ function HeroSection() {
           src="/women.png"
           alt="Grayson County Chamber of Commerce community members"
           fill
-          className="object-cover object-[center_35%]"
+          className="object-cover object-[calc(50%-10px)_35%] sm:object-[center_35%]"
           priority
         />
         {/* Mobile: strong uniform overlay for readability. Desktop: directional gradient for visual depth */}
@@ -50,7 +50,7 @@ function HeroSection() {
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight">
             Growing Stronger <span style={{ color: '#33a241' }}>Together</span>
           </h1>
-          <p className="mt-4 sm:mt-[2.16rem] text-base sm:text-xl lg:text-2xl text-white/90 leading-relaxed max-w-2xl">
+          <p className="mt-[1.91rem] sm:mt-[2.16rem] text-base sm:text-xl lg:text-2xl text-white/90 leading-relaxed max-w-2xl">
             The Grayson County Chamber connects local businesses,<br className="hidden sm:inline" />
             builds community, and helps your business thrive in the heart of Kentucky.
           </p>

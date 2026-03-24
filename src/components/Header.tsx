@@ -19,15 +19,10 @@ const moreLinks = [
   { href: "/resources", label: "Community Resources" },
 ];
 
-const allMobileLinks = [
-  ...mainLinks,
-  ...moreLinks,
-  { href: "/join", label: "Join Now" },
-];
-
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [moreOpen, setMoreOpen] = useState(false);
+  const [mobileMoreOpen, setMobileMoreOpen] = useState(false);
   const moreRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -39,6 +34,19 @@ export default function Header() {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+      setMobileMoreOpen(false);
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
@@ -129,31 +137,59 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Nav */}
+      {/* Mobile Nav — Overlay with backdrop */}
       {menuOpen && (
-        <nav className="lg:hidden border-t border-gray-100 bg-white pb-4">
-          <div className="max-w-7xl mx-auto px-4 pt-2 space-y-1">
-            {allMobileLinks.map((link) =>
-              link.href === "/join" ? (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setMenuOpen(false)}
-                  className="block bg-green-600 text-white text-center px-4 py-3.5 rounded-lg font-semibold text-lg mt-2 hover:bg-green-700 transition-colors"
-                >
-                  {link.label}
-                </Link>
-              ) : (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setMenuOpen(false)}
-                  className="block px-4 py-3.5 text-lg font-medium text-gray-700 hover:text-green-600 hover:bg-green-50 rounded-lg transition-colors"
-                >
-                  {link.label}
-                </Link>
-              )
+        <nav className="lg:hidden fixed inset-0 top-20 z-40">
+          <div
+            className="absolute inset-0 bg-black/40"
+            onClick={() => setMenuOpen(false)}
+          />
+          <div className="relative bg-white shadow-xl px-4 pt-4 pb-8 space-y-1 overflow-y-auto max-h-[calc(100vh-5rem)]">
+            {mainLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                className="block px-4 py-3.5 text-lg font-medium text-gray-700 hover:text-green-600 hover:bg-green-50 rounded-lg transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
+
+            {/* More dropdown on mobile */}
+            <button
+              onClick={() => setMobileMoreOpen(!mobileMoreOpen)}
+              className="flex items-center justify-between w-full px-4 py-3.5 text-lg font-medium text-gray-700 hover:text-green-600 hover:bg-green-50 rounded-lg transition-colors"
+            >
+              More
+              <ChevronDownIcon
+                className={`w-5 h-5 transition-transform ${mobileMoreOpen ? "rotate-180" : ""}`}
+              />
+            </button>
+            {mobileMoreOpen && (
+              <div className="pl-4 space-y-1">
+                {moreLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setMenuOpen(false)}
+                    className="block px-4 py-3 text-base font-medium text-gray-500 hover:text-green-600 hover:bg-green-50 rounded-lg transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
             )}
+
+            <div className="pt-3">
+              <Link
+                href="/join"
+                onClick={() => setMenuOpen(false)}
+                className="block bg-green-600 text-white text-center px-4 py-3.5 rounded-lg font-semibold text-lg hover:bg-green-700 transition-colors"
+              >
+                Join Now
+              </Link>
+            </div>
           </div>
         </nav>
       )}
