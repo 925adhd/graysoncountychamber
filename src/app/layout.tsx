@@ -50,6 +50,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-white text-gray-900 antialiased">
+        <div className="bg-yellow-400 text-black text-center py-2 px-4 text-sm font-semibold">
+          This is a demo site and is not official or affiliated with the Grayson County Chamber of Commerce.
+        </div>
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />
